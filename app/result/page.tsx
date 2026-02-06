@@ -193,7 +193,7 @@ export default function ResultPage() {
               💎 本気で起業したい方へ
             </p>
             <p className="text-sm text-gray-600 mt-1">
-              MVPローンチ代行サービス
+              起業サポートサービス
             </p>
             <p className="text-2xl font-bold text-purple-600 mt-2">
               49,800<span className="text-lg">円</span>
@@ -208,9 +208,9 @@ export default function ResultPage() {
 
           <a
             href={STRIPE_MVP_LINK}
-            className="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors"
+            className="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-6 rounded-lg text-center transition-colors text-lg"
           >
-            詳細を見る
+            今すぐ購入する
           </a>
         </div>
 

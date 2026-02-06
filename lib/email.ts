@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { STRIPE_PAYMENT_LINK, STRIPE_MVP_LINK } from './config';
 
 interface Business {
   name: string;
@@ -30,8 +31,6 @@ export async function sendDiagnosisEmail(
   senderName: string = '起業診断サービス'
 ): Promise<boolean> {
   const gmailUser = process.env.GMAIL_USER;
-  const stripeKitLink = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || '#';
-  const stripeMvpLink = process.env.NEXT_PUBLIC_STRIPE_MVP_LINK || '#';
 
   if (!gmailUser || !process.env.GMAIL_APP_PASSWORD) {
     console.log('Gmail credentials not configured');
@@ -81,19 +80,19 @@ export async function sendDiagnosisEmail(
 ✓ DM営業テンプレート10個
 ✓ 30分の個別相談（Zoom）1回付き
 
-今すぐ購入する：${stripeKitLink}
+今すぐ購入する：${STRIPE_PAYMENT_LINK}
 
 ━━━━━━━━━━━━━━━━━━
 本気で起業したい方へ
 ━━━━━━━━━━━━━━━━━━
 
-「MVPローンチ代行サービス」
+「起業サポートサービス」
 あなたの事業を2ヶ月で完全ローンチ！
 
 料金：49,800円
 内容：事業計画書作成、Webサイト制作、SNS投稿代行など
 
-詳細を見る：${stripeMvpLink}
+今すぐ購入する：${STRIPE_MVP_LINK}
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -120,17 +119,17 @@ ${senderName}
 
 このキットがあれば、今日から起業準備を始められます。
 
-今すぐ購入する：${stripeKitLink}
+今すぐ購入する：${STRIPE_PAYMENT_LINK}
 
 ━━━━━━━━━━━━━━━━━━
 さらにサポートが必要な方へ
 ━━━━━━━━━━━━━━━━━━
 
-「MVPローンチ代行サービス」（49,800円）
+「起業サポートサービス」（49,800円）
 事業計画書作成からWebサイト制作、SNS投稿代行まで
 すべてお任せください。
 
-詳細を見る：${stripeMvpLink}
+今すぐ購入する：${STRIPE_MVP_LINK}
 
 ━━━━━━━━━━━━━━━━━━
 

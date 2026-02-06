@@ -138,14 +138,14 @@ export default function KitPage() {
           </ul>
         </div>
 
-        {/* MVPサービスセクション */}
+        {/* 起業サポートサービスセクション */}
         <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200 rounded-xl p-6 space-y-4">
           <div className="text-center">
             <p className="text-lg font-bold text-gray-900">
               💎 さらにサポートが必要な方へ
             </p>
             <p className="text-sm text-gray-600 mt-1">
-              MVPローンチ代行サービス
+              起業サポートサービス
             </p>
             <p className="text-2xl font-bold text-purple-600 mt-2">
               49,800<span className="text-lg">円</span>
@@ -160,9 +160,9 @@ export default function KitPage() {
 
           <a
             href={STRIPE_MVP_LINK}
-            className="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors"
+            className="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-6 rounded-lg text-center transition-colors text-lg"
           >
-            詳細を見る
+            今すぐ購入する
           </a>
         </div>
 
