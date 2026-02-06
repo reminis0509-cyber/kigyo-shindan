@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>起業スタートキット | 30日で起業を実現</title>
+  <meta name="description" content="30日間のロードマップで、誰でも確実に起業できる。起業スタートキット3,980円">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent: '#f59e0b',
+            bgGray: '#f9fafb',
+          },
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
+    .btn-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .accordion-content.open {
+      max-height: 500px;
+    }
+    .strike {
+      text-decoration: line-through;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ヘッダーセクション -->
+  <header class="bg-gradient-to-br from-primary to-blue-700 text-white py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 fade-in">
+        あとは「具体的な手順」を<br class="hidden md:block">知るだけで起業できます
+      </h1>
+      <p class="text-lg md:text-xl opacity-90 mb-8 fade-in">
+        30日間のロードマップで、誰でも確実に起業できる
+      </p>
+      <a href="#starter-kit" class="inline-block bg-accent hover:bg-yellow-500 text-white font-bold py-4 px-8 rounded-lg text-lg btn-hover fade-in">
+        今すぐ3,980円で始める
+      </a>
+    </div>
+  </header>
+
+  <!-- 問題提起セクション -->
+  <section class="py-16 bg-bgGray">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 fade-in">
+        こんな悩みはありませんか？
+      </h2>
+      <div class="space-y-4 fade-in">
+        <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+          <i class="fas fa-square text-gray-300 mt-1"></i>
+          <p>起業したいけど、何から始めればいいか分からない</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+          <i class="fas fa-square text-gray-300 mt-1"></i>
+          <p>事業計画書の書き方が分からない</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+          <i class="fas fa-square text-gray-300 mt-1"></i>
+          <p>SNSで集客する方法が分からない</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+          <i class="fas fa-square text-gray-300 mt-1"></i>
+          <p>一人で進めるのが不安</p>
+        </div>
+        <div class="flex items-start gap-3 bg-white p-4 rounded-lg shadow-sm">
+          <i class="fas fa-square text-gray-300 mt-1"></i>
+          <p>失敗したくない</p>
+        </div>
+      </div>
+      <p class="text-center mt-10 text-lg text-gray-600 fade-in">
+        そのお悩み、<span class="text-primary font-bold">起業スタートキット</span>が解決します
+      </p>
+    </div>
+  </section>
+
+  <!-- 商品1: 起業スタートキット -->
+  <section id="starter-kit" class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- 商品紹介 -->
+      <div class="text-center mb-12 fade-in">
+        <p class="text-4xl mb-4">🎁</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">起業スタートキット</h2>
+        <div class="mb-6">
+          <span class="strike text-xl">通常価格 9,800円</span>
+          <span class="text-accent font-bold text-2xl ml-2">→ 今だけ 3,980円</span>
+          <span class="bg-accent text-white text-sm font-bold px-2 py-1 rounded ml-2">59%OFF</span>
+        </div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          30日間、毎日やることを明確に示したロードマップで、<br class="hidden md:block">迷わず起業できます
+        </p>
+      </div>
+
+      <!-- 30日間ロードマップ -->
+      <div class="bg-bgGray rounded-2xl p-6 md:p-8 mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-6">📅 30日間ロードマップ</h3>
+
+        <!-- タブ -->
+        <div class="flex flex-wrap justify-center gap-2 mb-6">
+          <button class="tab-btn bg-primary text-white px-4 py-2 rounded-lg font-medium" data-tab="week1">Week 1</button>
+          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week2">Week 2</button>
+          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week3">Week 3</button>
+          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week4">Week 4</button>
+        </div>
+
+        <!-- Week 1 -->
+        <div id="week1" class="tab-content active">
+          <h4 class="font-bold text-lg mb-4 text-primary">Week 1（1〜7日目）：事業の土台作り</h4>
+          <div class="space-y-2 text-sm md:text-base">
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 1: 強み発見ワークシート</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 2: 事業アイデア選定</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 3: 事業計画書作成</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 4: 屋号・サービス名決定</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 5: ターゲット顧客明確化</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 6: 価格設定</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 7: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
+          </div>
+        </div>
+
+        <!-- Week 2 -->
+        <div id="week2" class="tab-content">
+          <h4 class="font-bold text-lg mb-4 text-primary">Week 2（8〜14日目）：集客の準備</h4>
+          <div class="space-y-2 text-sm md:text-base">
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 8: SNSアカウント開設</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 9: プロフィール最適化</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 10: 初投稿作成</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 11: フォロワーを増やす投稿術</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 12: DM営業準備</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 13: DM営業文作成</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 14: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
+          </div>
+        </div>
+
+        <!-- Week 3 -->
+        <div id="week3" class="tab-content">
+          <h4 class="font-bold text-lg mb-4 text-primary">Week 3（15〜21日目）：実践開始</h4>
+          <div class="space-y-2 text-sm md:text-base">
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 15: 初投稿公開</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 16: 投稿継続の仕組み</span><span class="text-gray-500">2時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 17: DM営業開始</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 18: 返信対応</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 19: 商談の進め方</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 20: 契約書・請求書準備</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 21: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
+          </div>
+        </div>
+
+        <!-- Week 4 -->
+        <div id="week4" class="tab-content">
+          <h4 class="font-bold text-lg mb-4 text-primary">Week 4（22〜30日目）：ローンチ＆初受注</h4>
+          <div class="space-y-2 text-sm md:text-base">
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 22: 正式ローンチ</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 23: 初受注獲得</span><span class="text-gray-500">2時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 24: 顧客対応</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 25: リピーター獲得</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 26: 売上2倍戦略</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 27: 次の30日計画</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 28: 振り返りと改善</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 29: 継続チェックリスト</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-white p-3 rounded"><span>Day 30: 起業家認定</span><span class="text-gray-500">30分</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- キット内容 -->
+      <div class="mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-8">📦 キット内容（12点セット）</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">📋</p>
+            <h4 class="font-bold mb-1">事業計画書テンプレート</h4>
+            <p class="text-sm text-gray-600">30分で完成する穴埋め式</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">📱</p>
+            <h4 class="font-bold mb-1">SNS投稿テンプレート50個</h4>
+            <p class="text-sm text-gray-600">コピペで使えるTikTok/Instagram/X用</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">💬</p>
+            <h4 class="font-bold mb-1">DM営業テンプレート10個</h4>
+            <p class="text-sm text-gray-600">成約率30%超えの実績</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">🎯</p>
+            <h4 class="font-bold mb-1">ターゲットリスト作成シート</h4>
+            <p class="text-sm text-gray-600">誰に売るかを明確化</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">💰</p>
+            <h4 class="font-bold mb-1">価格設定シート</h4>
+            <p class="text-sm text-gray-600">適正価格を自動計算</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">📄</p>
+            <h4 class="font-bold mb-1">契約書・請求書テンプレート</h4>
+            <p class="text-sm text-gray-600">そのまま使える実務書類</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">📊</p>
+            <h4 class="font-bold mb-1">進捗管理シート</h4>
+            <p class="text-sm text-gray-600">毎日の進捗を記録</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">💪</p>
+            <h4 class="font-bold mb-1">強み発見シート</h4>
+            <p class="text-sm text-gray-600">あなたの強みを可視化</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">💡</p>
+            <h4 class="font-bold mb-1">事業アイデア選定シート</h4>
+            <p class="text-sm text-gray-600">稼げる事業を選ぶ基準</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">👤</p>
+            <h4 class="font-bold mb-1">プロフィール作成テンプレート</h4>
+            <p class="text-sm text-gray-600">フォロワーが増えるプロフィール</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">🤝</p>
+            <h4 class="font-bold mb-1">商談マニュアル</h4>
+            <p class="text-sm text-gray-600">成約率を上げる進め方</p>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+            <p class="text-2xl mb-2">😊</p>
+            <h4 class="font-bold mb-1">顧客対応マニュアル</h4>
+            <p class="text-sm text-gray-600">満足度を高める対応方法</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 特典 -->
+      <div class="bg-gradient-to-r from-accent to-yellow-400 rounded-2xl p-6 md:p-8 text-white mb-12 fade-in">
+        <div class="text-center">
+          <p class="text-3xl mb-2">🎁</p>
+          <h3 class="text-2xl font-bold mb-4">30分の個別相談（Zoom）1回付き</h3>
+          <p class="mb-4">購入後いつでも予約可能</p>
+          <div class="bg-white/20 rounded-xl p-4 text-left max-w-md mx-auto">
+            <ul class="space-y-2 text-sm">
+              <li>✓ 事業アイデアのブラッシュアップ</li>
+              <li>✓ SNS投稿の添削</li>
+              <li>✓ DM営業文の添削</li>
+              <li>✓ 価格設定の相談</li>
+              <li>✓ その他起業に関する疑問なんでも</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- こんな人におすすめ -->
+      <div class="mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-6">こんな人におすすめ</h3>
+        <div class="bg-blue-50 rounded-xl p-6 max-w-lg mx-auto">
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-primary mt-1"></i>
+              <span>起業したいけど何から始めればいいか分からない</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-primary mt-1"></i>
+              <span>「今日何をすればいいか」を明確にしてほしい</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-primary mt-1"></i>
+              <span>一人で進めるのは不安</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-primary mt-1"></i>
+              <span>最短で起業したい（30日以内）</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center fade-in">
+        <a href="https://buy.stripe.com/aFaeVcb6Z5Le5249Tr18c01" class="inline-block bg-accent hover:bg-yellow-500 text-white font-bold py-5 px-10 rounded-xl text-xl btn-hover shadow-lg">
+          今すぐ3,980円で購入する
+        </a>
+        <div class="mt-4 text-sm text-gray-500 space-y-1">
+          <p>✓ 30日間返金保証</p>
+          <p>✓ クレジットカード・デビットカード対応</p>
+          <p>✓ 決済はStripeで安全に処理</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 商品2: 起業サポートサービス -->
+  <section id="mvp-service" class="py-16 bg-bgGray">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- 商品紹介 -->
+      <div class="text-center mb-12 fade-in">
+        <p class="text-4xl mb-4">💎</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">起業サポートサービス</h2>
+        <p class="text-lg text-gray-600 mb-6">本気で起業したい人のための完全サポート</p>
+        <div class="mb-6">
+          <span class="strike text-xl">通常価格 98,000円</span>
+          <span class="text-primary font-bold text-2xl ml-2">→ 今だけ 49,800円</span>
+          <span class="bg-primary text-white text-sm font-bold px-2 py-1 rounded ml-2">49%OFF</span>
+        </div>
+        <p class="text-gray-600">分割払い: 24,900円×2回</p>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+          事業計画書からWebサイト構築、集客まで。<br class="hidden md:block">1〜2ヶ月であなたの事業を完全ローンチ
+        </p>
+      </div>
+
+      <!-- サービス内容 -->
+      <div class="mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-8">サービス内容</h3>
+
+        <!-- Phase 1 -->
+        <div class="bg-white rounded-xl p-6 mb-4 border-l-4 border-primary">
+          <h4 class="font-bold text-lg text-primary mb-4">Phase 1: 事業設計（Week 1-2）</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>初回ヒアリング（90分）</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>市場調査・競合分析</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>本格的な事業計画書作成</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>ターゲット顧客の明確化</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>価格設定・収益モデル設計</li>
+          </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-white rounded-xl p-6 mb-4 border-l-4 border-accent">
+          <h4 class="font-bold text-lg text-accent mb-4">Phase 2: MVP制作（Week 3-6）</h4>
+          <p class="text-sm text-gray-600 mb-4">選べる4パターン:</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="font-bold text-sm mb-2">パターンA: Webサービス系</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• LP制作</li>
+                <li>• Webサイト構築</li>
+                <li>• 予約・決済システム導入</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="font-bold text-sm mb-2">パターンB: SNS・コンテンツ販売系</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• SNSアカウント開設・最適化</li>
+                <li>• コンテンツ販売ページ作成</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="font-bold text-sm mb-2">パターンC: EC物販系</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Shopify/BASEストア構築</li>
+                <li>• 商品ページ最適化</li>
+              </ul>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <p class="font-bold text-sm mb-2">パターンD: サービス業系</p>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• LINE公式アカウント開設</li>
+                <li>• 自動応答シナリオ構築</li>
+                <li>• 予約管理システム導入</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-white rounded-xl p-6 mb-4 border-l-4 border-green-500">
+          <h4 class="font-bold text-lg text-green-600 mb-4">Phase 3: 集客準備（Week 7-8）</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>SNS投稿10本作成・投稿代行</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>DM営業代行（50件）</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>営業マニュアル提供</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>顧客対応マニュアル提供</li>
+          </ul>
+        </div>
+
+        <!-- 継続サポート -->
+        <div class="bg-white rounded-xl p-6 border-l-4 border-purple-500">
+          <h4 class="font-bold text-lg text-purple-600 mb-4">継続サポート（全期間）</h4>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>月2回のZoom面談（計8回）</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>チャットサポート（無制限）</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i>実務書類テンプレート提供</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- スケジュール -->
+      <div class="bg-white rounded-xl p-6 mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-6">📅 スケジュール</h3>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4">
+            <div class="w-24 text-sm font-medium text-gray-600">Week 1-2</div>
+            <div class="flex-1 bg-primary h-8 rounded-lg flex items-center px-3 text-white text-sm">事業設計</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-24 text-sm font-medium text-gray-600">Week 3-6</div>
+            <div class="flex-1 bg-accent h-8 rounded-lg flex items-center px-3 text-white text-sm">MVP制作</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-24 text-sm font-medium text-gray-600">Week 7-8</div>
+            <div class="flex-1 bg-green-500 h-8 rounded-lg flex items-center px-3 text-white text-sm">集客準備</div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-24 text-sm font-medium text-gray-600">Week 9</div>
+            <div class="flex-1 bg-purple-500 h-8 rounded-lg flex items-center px-3 text-white text-sm font-bold">🚀 ローンチ!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- こんな人におすすめ -->
+      <div class="mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-6">こんな人におすすめ</h3>
+        <div class="bg-purple-50 rounded-xl p-6 max-w-lg mx-auto">
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-purple-600 mt-1"></i>
+              <span>本気で起業したいが何から手をつければいいか分からない</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-purple-600 mt-1"></i>
+              <span>自分一人では不安、プロのサポートが欲しい</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-purple-600 mt-1"></i>
+              <span>最短で事業をローンチしたい</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-purple-600 mt-1"></i>
+              <span>Webサイトやシステム構築を任せたい</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-purple-600 mt-1"></i>
+              <span>確実に結果を出したい</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 実績 -->
+      <div class="mb-12 fade-in">
+        <h3 class="text-xl font-bold text-center mb-6">📊 実績</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <p class="text-sm text-gray-600 mb-2">事例1: SNS運用代行</p>
+            <p class="text-2xl font-bold text-primary">初月売上 15万円</p>
+            <p class="text-sm text-gray-500 mt-2">ローンチ期間: 47日</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <p class="text-sm text-gray-600 mb-2">事例2: EC物販</p>
+            <p class="text-2xl font-bold text-primary">初月売上 50万円</p>
+            <p class="text-sm text-gray-500 mt-2">ローンチ期間: 52日</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center shadow-sm">
+            <p class="text-sm text-gray-600 mb-2">事例3: 営業代行</p>
+            <p class="text-2xl font-bold text-primary">初月売上 30万円</p>
+            <p class="text-sm text-gray-500 mt-2">ローンチ期間: 38日</p>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-4">※収益は個人差があります</p>
+      </div>
+
+      <!-- 重要な注意事項 -->
+      <div class="bg-yellow-50 border border-yellow-300 rounded-xl p-6 mb-12 fade-in">
+        <h3 class="text-lg font-bold text-yellow-800 mb-4 flex items-center gap-2">
+          <i class="fas fa-exclamation-triangle"></i>
+          重要な注意事項
+        </h3>
+        <p class="text-gray-700 mb-4">
+          本サービスは「ローンチ可能な状態」まで持っていくことを保証しますが、ローンチ後の売上・収益は保証できません。
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-bold text-green-700 mb-2">私たちができること:</p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>✅ 確実にローンチできる状態を作る</li>
+              <li>✅ 成功確率が高い事業戦略を提供</li>
+              <li>✅ 自走できるスキルを身につける</li>
+              <li>✅ 初期の集客をサポート</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-bold text-red-700 mb-2">私たちができないこと:</p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>❌ あなたの代わりに事業を運営し続ける</li>
+              <li>❌ 売上を100%保証する</li>
+              <li>❌ あなたが行動しなくても成功させる</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 font-medium text-center">
+          「プロのサポートを受けながら、自分で成功を掴む」という覚悟がある方のみ、お申し込みください。
+        </p>
+      </div>
+
+      <!-- 成果保証 -->
+      <div class="bg-green-50 border border-green-300 rounded-xl p-6 mb-12 fade-in text-center">
+        <h3 class="text-lg font-bold text-green-800 mb-4">🛡️ 成果保証</h3>
+        <p class="text-gray-700 mb-4">
+          もし期間内に事業がローンチできなかった場合、<span class="font-bold text-green-700">全額返金</span>
+        </p>
+        <div class="bg-white rounded-lg p-4 max-w-md mx-auto text-left">
+          <p class="font-bold text-sm mb-2">条件:</p>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>✅ 月2回のZoom面談にすべて参加</li>
+            <li>✅ 指示・依頼に迅速に対応</li>
+            <li>✅ 必要な情報・素材を提供</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center fade-in">
+        <a href="https://buy.stripe.com/bJe5kC4IBflO3Y05Db18c02" class="inline-block bg-primary hover:bg-blue-700 text-white font-bold py-5 px-10 rounded-xl text-xl btn-hover shadow-lg">
+          今すぐ49,800円で申し込む
+        </a>
+        <div class="mt-4 text-sm text-gray-500 space-y-1">
+          <p>✓ 成果保証付き</p>
+          <p>✓ 分割払い対応</p>
+          <p>✓ クレジットカード・デビットカード対応</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 fade-in">よくある質問</h2>
+
+      <div class="space-y-4 fade-in">
+        <!-- Q1 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 起業スタートキットと起業サポートサービス、どちらを選べばいい？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              まず起業の基礎を学びたい、自分でやってみたい方 → 起業スタートキット<br>
+              プロに任せて確実にローンチしたい、時間を買いたい方 → 起業サポートサービス
+            </p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 事業アイデアが決まってないけど申し込める？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              起業スタートキットには個別相談が含まれており、起業サポートサービスでは初回ヒアリングで一緒に考えます。アイデアがなくても大丈夫です。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. パソコンスキルがないけど大丈夫？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              問題ありません。テンプレートは初心者でも使えるよう設計されており、起業サポートサービスでは操作方法も丁寧にレクチャーします。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 副業でも起業できる？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              はい。起業スタートキットは1日30分〜2時間の作業時間があれば進められます。起業サポートサービスは週10時間程度の作業時間があれば可能です。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 本当に30日で起業できる？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              ロードマップ通りに進めれば可能です。ただし、1日の作業時間が確保できない場合は60日程度かかる場合もあります。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 返金保証はある？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              起業スタートキットは購入から30日以内なら理由を問わず全額返金。起業サポートサービスは条件を満たした上でローンチできなかった場合に全額返金します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 分割払いはできる？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              起業サポートサービスは2回払い（24,900円×2回）に対応しています。起業スタートキットは一括払いのみです。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. サポート期間が終わった後はどうなる？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              起業スタートキットで提供するテンプレートは永久に使用可能。起業サポートサービスは期間終了後、月額制の継続サポートプラン（別途）もご用意しています。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. どんな業種に対応している？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              SNS運用代行、EC物販、営業代行、コンサルティング、コーチング、デザイン、ライティング、動画編集など、幅広い業種に対応しています。
+            </p>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <button class="accordion-btn w-full text-left p-4 bg-white hover:bg-gray-50 flex justify-between items-center">
+            <span class="font-medium">Q. 本当に稼げるようになる？</span>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </button>
+          <div class="accordion-content bg-gray-50 px-4">
+            <p class="py-4 text-gray-700">
+              起業スタートキットや起業サポートサービスは「起業するための仕組み」を提供するものであり、売上を保証するものではありません。最終的な成功はあなたの実行力と継続力に依存します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 比較表 -->
+  <section class="py-16 bg-bgGray">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 fade-in">プラン比較</h2>
+
+      <div class="overflow-x-auto fade-in">
+        <table class="w-full bg-white rounded-xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="p-4 text-left">項目</th>
+              <th class="p-4 text-center bg-blue-50">起業スタートキット</th>
+              <th class="p-4 text-center bg-purple-50">起業サポートサービス</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-t">
+              <td class="p-4 font-medium">価格</td>
+              <td class="p-4 text-center text-primary font-bold">3,980円</td>
+              <td class="p-4 text-center text-purple-600 font-bold">49,800円</td>
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="p-4 font-medium">期間</td>
+              <td class="p-4 text-center">30日間</td>
+              <td class="p-4 text-center">1〜2ヶ月</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4 font-medium">サポート</td>
+              <td class="p-4 text-center">個別相談30分×1回</td>
+              <td class="p-4 text-center">Zoom面談60分×8回<br>+ チャット無制限</td>
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="p-4 font-medium">事業計画書</td>
+              <td class="p-4 text-center">テンプレート提供</td>
+              <td class="p-4 text-center">プロが作成</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4 font-medium">Webサイト</td>
+              <td class="p-4 text-center text-gray-400">-</td>
+              <td class="p-4 text-center">制作代行</td>
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="p-4 font-medium">SNS投稿</td>
+              <td class="p-4 text-center">テンプレート50個</td>
+              <td class="p-4 text-center">10本作成・投稿代行</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-4 font-medium">DM営業</td>
+              <td class="p-4 text-center">テンプレート10個</td>
+              <td class="p-4 text-center">50件代行</td>
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="p-4 font-medium">こんな人向け</td>
+              <td class="p-4 text-center">自分でやりたい</td>
+              <td class="p-4 text-center">プロに任せたい</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最終CTA -->
+  <section class="py-16 bg-gradient-to-br from-primary to-blue-700 text-white">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 fade-in">
+        今すぐ起業への第一歩を踏み出しませんか？
+      </h2>
+      <div class="flex flex-col md:flex-row gap-4 justify-center fade-in">
+        <a href="https://buy.stripe.com/aFaeVcb6Z5Le5249Tr18c01" class="bg-accent hover:bg-yellow-500 text-white font-bold py-4 px-8 rounded-xl text-lg btn-hover">
+          起業スタートキット<br><span class="text-sm font-normal">3,980円で購入</span>
+        </a>
+        <a href="https://buy.stripe.com/bJe5kC4IBflO3Y05Db18c02" class="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-8 rounded-xl text-lg btn-hover">
+          起業サポートサービス<br><span class="text-sm font-normal">49,800円で申し込む</span>
+        </a>
+      </div>
+      <div class="mt-6 text-sm opacity-90">
+        <p>✓ 安心の返金保証</p>
+        <p>✓ クレジットカード・デビットカード対応</p>
+        <p>✓ Stripe決済で安全</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm">
+        <a href="/privacy" class="hover:text-white transition-colors">プライバシーポリシー</a>
+        <a href="/legal" class="hover:text-white transition-colors">特定商取引法に基づく表記</a>
+        <a href="mailto:contact@example.com" class="hover:text-white transition-colors">お問い合わせ</a>
+      </div>
+      <p class="text-sm">© 2025 起業サポート. All rights reserved.</p>
+      <p class="text-xs mt-2">※収益は個人差があり、保証するものではありません。</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.dataset.tab;
+
+        tabBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-white');
+          b.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        btn.classList.remove('bg-gray-200', 'text-gray-700');
+        btn.classList.add('bg-primary', 'text-white');
+
+        tabContents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === tabId) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+
+    // Accordion
+    const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+    accordionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+
+        content.classList.toggle('open');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+  </script>
+</body>
+</html>
