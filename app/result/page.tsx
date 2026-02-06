@@ -157,7 +157,7 @@ export default function ResultPage() {
         <div className="max-w-md mx-auto space-y-8">
           {/* ヘッダー */}
           <div className="text-center space-y-2">
-            <p className="text-blue-600 font-semibold">診断完了</p>
+            <p className="text-blue-600 font-semibold">🎉 診断完了</p>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
               あなたにピッタリの
               <br />
