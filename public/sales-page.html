@@ -49,12 +49,6 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
     }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
     .accordion-content {
       max-height: 0;
       overflow: hidden;
@@ -72,19 +66,50 @@
 <body class="bg-white text-gray-800">
 
   <!-- ヘッダーセクション -->
-  <header class="bg-gradient-to-br from-primary to-blue-700 text-white py-16 md:py-24">
+  <header class="bg-gradient-to-br from-primary to-blue-700 text-white py-12 md:py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 fade-in">
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4 fade-in">
         あとは「具体的な手順」を<br class="hidden md:block">知るだけで起業できます
       </h1>
-      <p class="text-lg md:text-xl opacity-90 mb-8 fade-in">
+      <p class="text-lg md:text-xl opacity-90 mb-6 fade-in">
         30日間のロードマップで、誰でも確実に起業できる
       </p>
-      <a href="#starter-kit" class="inline-block bg-accent hover:bg-yellow-500 text-white font-bold py-4 px-8 rounded-lg text-lg btn-hover fade-in">
-        今すぐ3,980円で始める
-      </a>
     </div>
   </header>
+
+  <!-- 上部購入ボタンセクション -->
+  <section class="py-10 bg-white border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- 起業スタートキット -->
+        <div class="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-6 text-center fade-in">
+          <p class="text-3xl mb-2">🎁</p>
+          <h3 class="text-xl font-bold mb-2">起業スタートキット</h3>
+          <p class="text-sm text-gray-600 mb-3">自分のペースで進めたい方へ</p>
+          <p class="text-3xl font-bold text-green-600 mb-1">3,980<span class="text-lg">円</span></p>
+          <p class="text-xs text-gray-500 mb-4">30日間のロードマップ + テンプレート12点 + 個別相談30分</p>
+          <a href="https://buy.stripe.com/aFaeVcb6Z5Le5249Tr18c01" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors btn-hover">
+            今すぐ購入する
+          </a>
+        </div>
+
+        <!-- 起業サポートサービス -->
+        <div class="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-300 rounded-2xl p-6 text-center fade-in">
+          <p class="text-3xl mb-2">💎</p>
+          <h3 class="text-xl font-bold mb-2">起業サポートサービス</h3>
+          <p class="text-sm text-gray-600 mb-3">プロに任せて確実にローンチしたい方へ</p>
+          <p class="text-3xl font-bold text-purple-600 mb-1">49,800<span class="text-lg">円</span></p>
+          <p class="text-xs text-gray-500 mb-4">事業計画書作成 + Webサイト制作 + SNS投稿代行 + 面談8回</p>
+          <a href="https://buy.stripe.com/bJe5kC4IBflO3Y05Db18c02" class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-colors btn-hover">
+            今すぐ申し込む
+          </a>
+        </div>
+      </div>
+      <p class="text-center text-xs text-gray-500 mt-4">
+        ✓ 安心の返金保証 ✓ クレジットカード・デビットカード対応 ✓ Stripe決済で安全
+      </p>
+    </div>
+  </section>
 
   <!-- 問題提起セクション -->
   <section class="py-16 bg-bgGray">
@@ -137,74 +162,60 @@
         </p>
       </div>
 
-      <!-- 30日間ロードマップ -->
+      <!-- 30日間ロードマップ（プレビュー） -->
       <div class="bg-bgGray rounded-2xl p-6 md:p-8 mb-12 fade-in">
-        <h3 class="text-xl font-bold text-center mb-6">📅 30日間ロードマップ</h3>
+        <h3 class="text-xl font-bold text-center mb-2">📅 30日間ロードマップ</h3>
+        <p class="text-center text-sm text-gray-500 mb-6">毎日やることが明確だから迷わない</p>
 
-        <!-- タブ -->
-        <div class="flex flex-wrap justify-center gap-2 mb-6">
-          <button class="tab-btn bg-primary text-white px-4 py-2 rounded-lg font-medium" data-tab="week1">Week 1</button>
-          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week2">Week 2</button>
-          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week3">Week 3</button>
-          <button class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium" data-tab="week4">Week 4</button>
-        </div>
-
-        <!-- Week 1 -->
-        <div id="week1" class="tab-content active">
-          <h4 class="font-bold text-lg mb-4 text-primary">Week 1（1〜7日目）：事業の土台作り</h4>
-          <div class="space-y-2 text-sm md:text-base">
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 1: 強み発見ワークシート</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 2: 事業アイデア選定</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 3: 事業計画書作成</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 4: 屋号・サービス名決定</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 5: ターゲット顧客明確化</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 6: 価格設定</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 7: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
+        <!-- Week概要 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+          <div class="bg-primary text-white rounded-lg p-4 text-center">
+            <p class="font-bold">Week 1</p>
+            <p class="text-xs opacity-90">事業の土台作り</p>
+          </div>
+          <div class="bg-blue-400 text-white rounded-lg p-4 text-center">
+            <p class="font-bold">Week 2</p>
+            <p class="text-xs opacity-90">集客の準備</p>
+          </div>
+          <div class="bg-blue-500 text-white rounded-lg p-4 text-center">
+            <p class="font-bold">Week 3</p>
+            <p class="text-xs opacity-90">実践開始</p>
+          </div>
+          <div class="bg-blue-600 text-white rounded-lg p-4 text-center">
+            <p class="font-bold">Week 4</p>
+            <p class="text-xs opacity-90">ローンチ＆初受注</p>
           </div>
         </div>
 
-        <!-- Week 2 -->
-        <div id="week2" class="tab-content">
-          <h4 class="font-bold text-lg mb-4 text-primary">Week 2（8〜14日目）：集客の準備</h4>
+        <!-- Week 1 プレビュー（一部のみ公開） -->
+        <div class="bg-white rounded-xl p-5 border border-gray-200">
+          <h4 class="font-bold text-lg mb-4 text-primary flex items-center gap-2">
+            <span class="bg-primary text-white text-xs px-2 py-1 rounded">Week 1</span>
+            事業の土台作り（1〜7日目）
+          </h4>
           <div class="space-y-2 text-sm md:text-base">
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 8: SNSアカウント開設</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 9: プロフィール最適化</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 10: 初投稿作成</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 11: フォロワーを増やす投稿術</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 12: DM営業準備</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 13: DM営業文作成</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 14: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-gray-50 p-3 rounded"><span>Day 1: 強み発見ワークシート</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-gray-50 p-3 rounded"><span>Day 2: 事業アイデア選定</span><span class="text-gray-500">1時間</span></div>
+            <div class="flex justify-between bg-gray-50 p-3 rounded"><span>Day 3: 事業計画書作成</span><span class="text-gray-500">30分</span></div>
+            <div class="flex justify-between bg-gray-100 p-3 rounded text-gray-400">
+              <span>Day 4〜7: ...</span>
+              <span class="text-xs">購入後に公開</span>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-center text-sm text-gray-500">
+              <i class="fas fa-lock mr-1"></i>
+              Week 2〜4の詳細は購入後にご覧いただけます
+            </p>
           </div>
         </div>
 
-        <!-- Week 3 -->
-        <div id="week3" class="tab-content">
-          <h4 class="font-bold text-lg mb-4 text-primary">Week 3（15〜21日目）：実践開始</h4>
-          <div class="space-y-2 text-sm md:text-base">
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 15: 初投稿公開</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 16: 投稿継続の仕組み</span><span class="text-gray-500">2時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 17: DM営業開始</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 18: 返信対応</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 19: 商談の進め方</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 20: 契約書・請求書準備</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 21: 振り返りチェック</span><span class="text-gray-500">30分</span></div>
-          </div>
-        </div>
-
-        <!-- Week 4 -->
-        <div id="week4" class="tab-content">
-          <h4 class="font-bold text-lg mb-4 text-primary">Week 4（22〜30日目）：ローンチ＆初受注</h4>
-          <div class="space-y-2 text-sm md:text-base">
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 22: 正式ローンチ</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 23: 初受注獲得</span><span class="text-gray-500">2時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 24: 顧客対応</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 25: リピーター獲得</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 26: 売上2倍戦略</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 27: 次の30日計画</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 28: 振り返りと改善</span><span class="text-gray-500">1時間</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 29: 継続チェックリスト</span><span class="text-gray-500">30分</span></div>
-            <div class="flex justify-between bg-white p-3 rounded"><span>Day 30: 起業家認定</span><span class="text-gray-500">30分</span></div>
-          </div>
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600 mb-3">1日30分〜2時間の作業で、30日後には起業完了</p>
+          <a href="https://buy.stripe.com/aFaeVcb6Z5Le5249Tr18c01" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg transition-colors btn-hover">
+            全ロードマップを見る（3,980円）
+          </a>
         </div>
       </div>
 
@@ -814,30 +825,6 @@
     }, { threshold: 0.1 });
 
     fadeElements.forEach(el => observer.observe(el));
-
-    // Tab switching
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tabId = btn.dataset.tab;
-
-        tabBtns.forEach(b => {
-          b.classList.remove('bg-primary', 'text-white');
-          b.classList.add('bg-gray-200', 'text-gray-700');
-        });
-        btn.classList.remove('bg-gray-200', 'text-gray-700');
-        btn.classList.add('bg-primary', 'text-white');
-
-        tabContents.forEach(content => {
-          content.classList.remove('active');
-          if (content.id === tabId) {
-            content.classList.add('active');
-          }
-        });
-      });
-    });
 
     // Accordion
     const accordionBtns = document.querySelectorAll('.accordion-btn');
