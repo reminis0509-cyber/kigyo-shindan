@@ -3,10 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDiagnosis } from '@/lib/context';
-
-// 環境変数からStripeリンクを取得（デフォルト値はダミー）
-const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || '#';
-const STRIPE_MVP_LINK = process.env.NEXT_PUBLIC_STRIPE_MVP_LINK || '#';
+import { STRIPE_PAYMENT_LINK, STRIPE_MVP_LINK } from '@/lib/config';
 
 export default function KitPage() {
   const router = useRouter();

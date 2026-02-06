@@ -5,10 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useDiagnosis } from '@/lib/context';
 import { diagnose } from '@/lib/diagnosis';
 import { Business, DiagnosisAnswers } from '@/lib/types';
-
-// 環境変数からStripeリンクを取得（デフォルト値はダミー）
-const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK || '#';
-const STRIPE_MVP_LINK = process.env.NEXT_PUBLIC_STRIPE_MVP_LINK || '#';
+import { STRIPE_PAYMENT_LINK, STRIPE_MVP_LINK } from '@/lib/config';
 
 function BusinessCard({ business, rank }: { business: Business; rank: number }) {
   const rankColors = {
