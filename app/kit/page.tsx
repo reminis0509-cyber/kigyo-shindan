@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDiagnosis } from '@/lib/context';
 
@@ -11,11 +11,36 @@ const STRIPE_MVP_LINK = process.env.NEXT_PUBLIC_STRIPE_MVP_LINK || '#';
 export default function KitPage() {
   const router = useRouter();
   const { userData } = useDiagnosis();
+  const apiCalledRef = useRef(false);
 
   useEffect(() => {
     // メールアドレスがない場合はトップページへリダイレクト
     if (!userData.email) {
       router.push('/');
+      return;
+    }
+
+    // 層Aの場合、APIを呼び出してメール送信（1回だけ）
+    if (!apiCalledRef.current && userData.layer === 'A') {
+      apiCalledRef.current = true;
+
+      fetch('/api/diagnose', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userData.email,
+          layer: 'A',
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('API response:', data);
+        })
+        .catch((error) => {
+          console.error('API error:', error);
+        });
     }
   }, [userData, router]);
 

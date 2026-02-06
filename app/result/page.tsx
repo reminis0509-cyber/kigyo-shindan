@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDiagnosis } from '@/lib/context';
 import { diagnose } from '@/lib/diagnosis';
@@ -66,6 +66,7 @@ export default function ResultPage() {
   const router = useRouter();
   const { userData, setResult } = useDiagnosis();
   const [isLoading, setIsLoading] = useState(true);
+  const apiCalledRef = useRef(false);
 
   useEffect(() => {
     // 必要なデータがない場合はリダイレクト
@@ -90,6 +91,30 @@ export default function ResultPage() {
     if (!userData.result) {
       const result = diagnose(userData.answers as DiagnosisAnswers);
       setResult(result);
+    }
+
+    // APIを呼び出してメール送信（1回だけ）
+    if (!apiCalledRef.current && userData.answers) {
+      apiCalledRef.current = true;
+
+      fetch('/api/diagnose', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userData.email,
+          layer: 'B',
+          answers: userData.answers,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('API response:', data);
+        })
+        .catch((error) => {
+          console.error('API error:', error);
+        });
     }
 
     setIsLoading(false);
