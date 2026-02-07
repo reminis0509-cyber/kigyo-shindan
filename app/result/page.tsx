@@ -197,6 +197,13 @@ export default function ResultPage() {
       {/* 上部購入ボタンセクション */}
       <div className="w-full bg-blue-50 py-10 px-4">
         <div className="max-w-4xl mx-auto">
+          {/* 手動メール送信の注意書き */}
+          <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 mb-6 text-center">
+            <p className="text-yellow-800 text-sm font-medium">
+              ご購入後、12時間以内にご登録メールアドレス宛に商品をお届けします
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {/* 起業スタートキット */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl p-6 text-center">
@@ -374,6 +381,12 @@ export default function ResultPage() {
 
           {/* CTA */}
           <div className="text-center mb-10">
+            {/* 手動メール送信の注意書き */}
+            <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 mb-4 max-w-md mx-auto">
+              <p className="text-yellow-800 text-sm font-medium">
+                ご購入後、12時間以内にご登録メールアドレス宛に商品をお届けします
+              </p>
+            </div>
             <a
               href={STRIPE_PAYMENT_LINK}
               className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-5 px-10 rounded-xl text-xl shadow-lg transition-all hover:shadow-xl"
@@ -466,6 +479,12 @@ export default function ResultPage() {
 
           {/* CTA */}
           <div className="text-center">
+            {/* 手動メール送信の注意書き */}
+            <div className="bg-yellow-50 border border-yellow-300 rounded-xl p-4 mb-4 max-w-md mx-auto">
+              <p className="text-yellow-800 text-sm font-medium">
+                ご購入後、12時間以内にご登録メールアドレス宛にご連絡いたします
+              </p>
+            </div>
             <a
               href={STRIPE_MVP_LINK}
               className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-10 rounded-xl text-xl shadow-lg transition-all hover:shadow-xl"
@@ -552,9 +571,13 @@ export default function ResultPage() {
       {/* 最終CTA */}
       <div className="w-full bg-gradient-to-br from-blue-600 to-blue-800 text-white py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-8">
+          <h2 className="text-2xl font-bold mb-4">
             今すぐ起業への第一歩を踏み出しませんか？
           </h2>
+          {/* 手動メール送信の注意書き */}
+          <p className="text-white/80 text-sm mb-6">
+            ※ご購入後、12時間以内にご登録メールアドレス宛にご連絡いたします
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={STRIPE_PAYMENT_LINK}

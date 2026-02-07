@@ -17,6 +17,7 @@ export default function InitialQuestion() {
 
   const handleSelectA = () => {
     setLayer('A');
+    // 商品詳細ページ（/kit）に遷移
     router.push('/kit');
   };
 

@@ -65,6 +65,32 @@ export async function POST(request: NextRequest) {
     // メール送信
     const emailSent = await sendDiagnosisEmail(email, result, layer);
 
+    // GASにデータを送信（Google Sheetsに保存）
+    const gasUrl = process.env.GAS_EMAIL_COLLECTOR_URL;
+    if (gasUrl) {
+      try {
+        await fetch(gasUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            layer,
+            answers: answers || {},
+            result: result ? {
+              rank1: result.rank1.name,
+              rank2: result.rank2.name,
+              rank3: result.rank3.name,
+            } : {},
+          }),
+        });
+        console.log('GAS: Diagnosis data sent');
+      } catch (gasError) {
+        console.error('GAS error:', gasError);
+      }
+    }
+
     return NextResponse.json({
       success: true,
       result: result,

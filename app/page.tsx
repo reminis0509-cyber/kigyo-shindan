@@ -31,6 +31,42 @@ export default function LandingPage() {
     }
 
     setIsLoading(true);
+
+    // マスターユーザーかチェック
+    try {
+      const checkResponse = await fetch('/api/admin/check', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: inputEmail }),
+      });
+      const checkData = await checkResponse.json();
+
+      if (checkData.isAdmin) {
+        // マスターユーザーの場合は管理画面ログインへ
+        router.push(`/admin/login?email=${encodeURIComponent(inputEmail)}`);
+        return;
+      }
+    } catch (error) {
+      console.error('Failed to check admin:', error);
+    }
+
+    // 通常ユーザーの場合
+    // メールアドレスをAPIに送信（Google Sheetsに保存）
+    try {
+      await fetch('/api/submit-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: inputEmail }),
+      });
+    } catch (error) {
+      console.error('Failed to submit email:', error);
+      // エラーでも続行
+    }
+
     setEmail(inputEmail);
     router.push('/question/initial');
   };
