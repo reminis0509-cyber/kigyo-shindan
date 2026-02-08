@@ -1,14 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
-// インメモリストレージ（開発用 - Vercel再デプロイで消える）
-// 本番ではGASまたはデータベースを使用
-const users: Array<{
-  email: string;
-  registeredAt: string;
-  layer?: string;
-  answers?: Record<string, string>;
-  result?: { rank1: string; rank2: string; rank3: string };
-}> = [];
+import { userStorage } from '@/lib/userStorage';
 
 export async function GET(request: NextRequest) {
   try {
@@ -37,12 +28,15 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    // GASが設定されていない場合はインメモリデータを返す
+    // GASが設定されていない場合は共有ストレージのデータを返す
+    const users = userStorage.getAll();
+    console.log('Returning users from shared storage:', users.length);
+
     return NextResponse.json({
       success: true,
       users: users,
       source: 'memory',
-      message: gasUrl ? 'GASからの取得に失敗しました' : 'GAS_EMAIL_COLLECTOR_URLが設定されていません',
+      message: gasUrl ? 'GASからの取得に失敗しました' : 'GAS_EMAIL_COLLECTOR_URLが設定されていません（インメモリで動作中）',
     });
   } catch (error) {
     console.error('Admin users error:', error);
@@ -64,26 +58,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // インメモリに保存
-    const existingIndex = users.findIndex(u => u.email === email);
-    if (existingIndex >= 0) {
-      // 既存ユーザーを更新
-      users[existingIndex] = {
-        ...users[existingIndex],
-        layer: layer || users[existingIndex].layer,
-        answers: answers || users[existingIndex].answers,
-        result: result || users[existingIndex].result,
-      };
-    } else {
-      // 新規ユーザー
-      users.push({
-        email,
-        registeredAt: new Date().toISOString(),
-        layer,
-        answers,
-        result,
-      });
-    }
+    // 共有ストレージに保存
+    userStorage.upsert({
+      email,
+      layer,
+      answers,
+      result,
+    });
+
+    console.log('User saved via admin API. Total users:', userStorage.count());
 
     // GASにも送信
     const gasUrl = process.env.GAS_EMAIL_COLLECTOR_URL;

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { userStorage } from '@/lib/userStorage';
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,6 +19,22 @@ export async function POST(request: NextRequest) {
       email: email,
       layer: layer || 'initial',
     }));
+
+    // インメモリストレージに保存（管理画面と共有）
+    const resultData = result ? {
+      rank1: result.rank1?.name || result.rank1 || '',
+      rank2: result.rank2?.name || result.rank2 || '',
+      rank3: result.rank3?.name || result.rank3 || '',
+    } : undefined;
+
+    userStorage.upsert({
+      email,
+      layer: layer || '',
+      answers: answers || undefined,
+      result: resultData,
+    });
+
+    console.log('User saved to storage. Total users:', userStorage.count());
 
     // GASにメールアドレスを送信（Google Sheetsに保存）
     const gasUrl = process.env.GAS_EMAIL_COLLECTOR_URL;
